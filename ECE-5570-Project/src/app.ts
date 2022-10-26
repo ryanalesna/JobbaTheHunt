@@ -1,0 +1,31 @@
+import { ListTemplate } from './classes/ListTemplate.js';
+import { HasFormatter } from './interfaces/HasFormatter.js';
+import { Job } from './classes/Job.js';
+
+
+const form = document.querySelector('.new-item-form') as HTMLFormElement;
+
+
+// inputs
+const name = document.querySelector("name") as HTMLInputElement;
+const CoName = document.querySelector('#CoName') as HTMLInputElement;
+const jobTitle = document.querySelector('#title') as HTMLInputElement;
+const details = document.querySelector('#details') as HTMLInputElement;
+const startDate = document.querySelector('#start-date') as HTMLInputElement;
+const endDate = document.querySelector('#end-date') as HTMLInputElement;
+
+
+//list template instance
+const ul = document.querySelector('ul')!;
+const list = new ListTemplate(ul);
+
+form.addEventListener('Add', (e: Event) => {
+  e.preventDefault();
+    let i = 1; 
+    let doc: HasFormatter;
+    doc = new Job(CoName.value, jobTitle.value, details.value, startDate.value, endDate.value);
+    console.log(doc);
+    list.render(doc, `Job ${i}`);
+    i++;
+});
+

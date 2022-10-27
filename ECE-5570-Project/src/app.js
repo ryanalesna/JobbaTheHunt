@@ -1,5 +1,4 @@
 import { ListTemplate } from './classes/ListTemplate.js';
-import { Job } from './classes/Job.js';
 var nameForm = document.querySelector('.name-form');
 var jobForm = document.querySelector('.new-item-form');
 // inputs
@@ -17,10 +16,10 @@ nameForm.addEventListener('submit', function (e) {
     var applicantName = name.value;
     console.log(applicantName);
 });
-jobForm.addEventListener('add', function (e) {
+jobForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    var doc;
-    doc = new Job(CoName.value, jobTitle.value, details.value, startDate.valueAsDate, endDate.valueAsDate);
+    /*let doc = new Job(CoName.value, jobTitle.value, details.value, startDate.valueAsDate, endDate.valueAsDate);
     console.log(doc);
-    //list.render(doc, `Job ${i}`);
+    list.render(doc, `Job`);*/
+    console.log(CoName.value, jobTitle.value, details.value, startDate.value, endDate.value);
 });

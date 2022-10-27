@@ -27,11 +27,11 @@ nameForm.addEventListener('submit', (e: Event) => {
   
 });
 
-jobForm.addEventListener('add', (e: Event) => {
+jobForm.addEventListener('submit', (e: Event) => {
   e.preventDefault();
-  let doc: HasFormatter;
-  doc = new Job(CoName.value, jobTitle.value, details.value, startDate.valueAsDate, endDate.valueAsDate);
-  console.log(doc);
-    //list.render(doc, `Job ${i}`);
+    /*let doc = new Job(CoName.value, jobTitle.value, details.value, startDate.valueAsDate, endDate.valueAsDate);
+    console.log(doc);
+    list.render(doc, `Job`);*/
+    console.log(CoName.value, jobTitle.value, details.value, startDate.value, endDate.value);
 });
 

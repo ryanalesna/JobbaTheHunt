@@ -3,19 +3,21 @@ export class Job implements HasFormatter {
     companyName: string;
     jobTitle: string;
     desc: string;
-    startDate: Date;
-    endDate: Date;
+    startDate: number;
+    endDate: number;
 
-     constructor(con: string, jt: string, d: string, sd: any, ed: any){
+    constructor(con: string, jt: string, d: string, sd: any, ed: any){
         this.companyName = con;
         this.jobTitle = jt;
         this.desc = d;
         this.startDate = sd;
         this.endDate = ed;
     }
+   
     format() {
         return `${this.jobTitle} at ${this.companyName}, ${this.desc}: from ${this.startDate} to ${this.endDate}`;
-      }
+
+    }
 };
 
 let jobs: Job[] = [];

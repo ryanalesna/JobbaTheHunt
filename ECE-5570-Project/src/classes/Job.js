@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Job = void 0;
 var Job = /** @class */ (function () {
     function Job(con, jt, d, sd, ed) {
         this.companyName = con;
@@ -14,8 +11,8 @@ var Job = /** @class */ (function () {
     };
     return Job;
 }());
-exports.Job = Job;
+export { Job };
 ;
 var jobs = [];
-var jobOne = new Job('encova', 'Automation Engineer Intern', 'maintained test scripts', '5/10/2021', '2/1/2022');
-console.log(jobOne);
+//const jobOne = new Job('encova', 'Automation Engineer Intern', 'maintained test scripts', '5/10/2021', '2/1/2022');
+//console.log(jobOne);

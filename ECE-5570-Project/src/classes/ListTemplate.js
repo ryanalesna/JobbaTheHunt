@@ -1,11 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ListTemplate = void 0;
 var ListTemplate = /** @class */ (function () {
     function ListTemplate(container) {
         this.container = container;
     }
-    ListTemplate.prototype.render = function (item, title, location) {
+    ListTemplate.prototype.render = function (item, title) {
         var li = document.createElement('li');
         var h4 = document.createElement('h4');
         h4.innerText = title;
@@ -13,16 +10,11 @@ var ListTemplate = /** @class */ (function () {
         var p = document.createElement('p');
         p.innerText = item.format();
         li.append(p);
-        if (location === 'start') {
-            this.container.prepend(li);
-        }
-        else {
-            this.container.append(li);
-        }
+        this.container.prepend(li);
     };
     return ListTemplate;
 }());
-exports.ListTemplate = ListTemplate;
+export { ListTemplate };
 /*
 1. register a list container in the constructor
 2. create a render method to render a new 'li' to the container

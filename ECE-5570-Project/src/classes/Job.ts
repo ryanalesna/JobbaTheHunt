@@ -3,10 +3,10 @@ export class Job implements HasFormatter {
     companyName: string;
     jobTitle: string;
     desc: string;
-    startDate: string;
-    endDate: string;
+    startDate: Date;
+    endDate: Date;
 
-     constructor(con: string, jt: string, d: string, sd: string, ed: string){
+     constructor(con: string, jt: string, d: string, sd: any, ed: any){
         this.companyName = con;
         this.jobTitle = jt;
         this.desc = d;
@@ -19,5 +19,5 @@ export class Job implements HasFormatter {
 };
 
 let jobs: Job[] = [];
-const jobOne = new Job('encova', 'Automation Engineer Intern', 'maintained test scripts', '5/10/2021', '2/1/2022');
-console.log(jobOne);
+//const jobOne = new Job('encova', 'Automation Engineer Intern', 'maintained test scripts', '5/10/2021', '2/1/2022');
+//console.log(jobOne);

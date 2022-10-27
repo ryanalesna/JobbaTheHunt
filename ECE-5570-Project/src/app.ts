@@ -3,11 +3,12 @@ import { HasFormatter } from './interfaces/HasFormatter.js';
 import { Job } from './classes/Job.js';
 
 
-const form = document.querySelector('.new-item-form') as HTMLFormElement;
+const nameForm = document.querySelector('.name-form') as HTMLFormElement;
+const jobForm = document.querySelector('.new-item-form') as HTMLFormElement;
 
 
 // inputs
-const name = document.querySelector("name") as HTMLInputElement;
+const name = document.querySelector("#name") as HTMLInputElement;
 const CoName = document.querySelector('#CoName') as HTMLInputElement;
 const jobTitle = document.querySelector('#title') as HTMLInputElement;
 const details = document.querySelector('#details') as HTMLInputElement;
@@ -19,13 +20,18 @@ const endDate = document.querySelector('#end-date') as HTMLInputElement;
 const ul = document.querySelector('ul')!;
 const list = new ListTemplate(ul);
 
-form.addEventListener('Add', (e: Event) => {
+nameForm.addEventListener('submit', (e: Event) => {
   e.preventDefault();
-    let i = 1; 
-    let doc: HasFormatter;
-    doc = new Job(CoName.value, jobTitle.value, details.value, startDate.value, endDate.value);
-    console.log(doc);
-    list.render(doc, `Job ${i}`);
-    i++;
+  let applicantName = name.value;
+  console.log(applicantName);
+  
+});
+
+jobForm.addEventListener('add', (e: Event) => {
+  e.preventDefault();
+  let doc: HasFormatter;
+  doc = new Job(CoName.value, jobTitle.value, details.value, startDate.valueAsDate, endDate.valueAsDate);
+  console.log(doc);
+    //list.render(doc, `Job ${i}`);
 });
 

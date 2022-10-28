@@ -5,6 +5,7 @@ var jobForm = document.querySelector('.new-item-form');
 // inputs
 var name = document.querySelector("#name");
 var schoolname = document.querySelector("#school");
+var appEmail = document.querySelector("#email");
 var CoName = document.querySelector('#CoName');
 var jobTitle = document.querySelector('#title');
 var details = document.querySelector('#details');
@@ -17,7 +18,8 @@ nameForm.addEventListener('submit', function (e) {
     e.preventDefault();
     var applicantName = name.value;
     var school = schoolname.value;
-    console.log(applicantName, school);
+    var email = appEmail.value;
+    console.log(applicantName, email, school);
 });
 jobForm.addEventListener('submit', function (e) {
     e.preventDefault();

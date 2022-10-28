@@ -10,6 +10,7 @@ const jobForm = document.querySelector('.new-item-form') as HTMLFormElement;
 // inputs
 const name = document.querySelector("#name") as HTMLInputElement;
 const schoolname = document.querySelector("#school") as HTMLInputElement;
+const appEmail = document.querySelector("#email") as HTMLInputElement;
 
 
 const CoName = document.querySelector('#CoName') as HTMLInputElement;
@@ -25,7 +26,8 @@ nameForm.addEventListener('submit', (e: Event) => {
   e.preventDefault();
   let applicantName = name.value;
   let school = schoolname.value;
-  console.log(applicantName, school);
+  let email = appEmail.value;
+  console.log(applicantName, email, school);
   
 });
 

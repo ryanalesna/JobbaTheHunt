@@ -33,10 +33,10 @@ nameForm.addEventListener('submit', (e: Event) => {
 
 jobForm.addEventListener('submit', (e: Event) => {
   e.preventDefault();
-  //let jobs = Job[];
-    let doc = new Job(CoName.value, jobTitle.value, details.value, startDate.value, endDate.value);
-    console.log(doc);
-    //jobs.push(job);
+  let jobs: Job[] = [];
+  let doc = new Job(CoName.value, jobTitle.value, details.value, startDate.value, endDate.value);
+    jobs.push(doc);
+    console.log(jobs);
     list.render(doc, `Experience`);
     
 });

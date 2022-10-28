@@ -23,9 +23,9 @@ nameForm.addEventListener('submit', function (e) {
 });
 jobForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    //let jobs = Job[];
+    var jobs = [];
     var doc = new Job(CoName.value, jobTitle.value, details.value, startDate.value, endDate.value);
-    console.log(doc);
-    //jobs.push(job);
+    jobs.push(doc);
+    console.log(jobs);
     list.render(doc, "Experience");
 });

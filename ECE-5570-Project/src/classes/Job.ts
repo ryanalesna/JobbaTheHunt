@@ -3,8 +3,8 @@ export class Job implements HasFormatter {
     companyName: string;
     jobTitle: string;
     desc: string;
-    startDate: number;
-    endDate: number;
+    startDate: string;
+    endDate: string;
 
     constructor(con: string, jt: string, d: string, sd: any, ed: any){
         this.companyName = con;

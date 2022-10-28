@@ -10,7 +10,7 @@ var ListTemplate = /** @class */ (function () {
         var p = document.createElement('p');
         p.innerText = item.format();
         li.append(p);
-        this.container.prepend(li);
+        this.container.append(li);
     };
     return ListTemplate;
 }());

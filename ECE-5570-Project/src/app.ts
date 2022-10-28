@@ -9,13 +9,12 @@ const jobForm = document.querySelector('.new-item-form') as HTMLFormElement;
 
 // inputs
 const name = document.querySelector("#name") as HTMLInputElement;
+
 const CoName = document.querySelector('#CoName') as HTMLInputElement;
 const jobTitle = document.querySelector('#title') as HTMLInputElement;
 const details = document.querySelector('#details') as HTMLInputElement;
-const startDate = document.querySelector('#start-date') as HTMLInputElement;
-const endDate = document.querySelector('#end-date') as HTMLInputElement;
-
-
+const startDate = document.querySelector('#startdate') as HTMLInputElement;
+const endDate = document.querySelector('#enddate') as HTMLInputElement;
 //list template instance
 const ul = document.querySelector('ul')!;
 const list = new ListTemplate(ul);
@@ -29,9 +28,17 @@ nameForm.addEventListener('submit', (e: Event) => {
 
 jobForm.addEventListener('submit', (e: Event) => {
   e.preventDefault();
-    /*let doc = new Job(CoName.value, jobTitle.value, details.value, startDate.valueAsDate, endDate.valueAsDate);
+  //let jobs = Job[];
+    let doc = new Job(CoName.value, jobTitle.value, details.value, startDate.value, endDate.value);
     console.log(doc);
-    list.render(doc, `Job`);*/
-    console.log(CoName.value, jobTitle.value, details.value, startDate.value, endDate.value);
+    //jobs.push(job);
+    list.render(doc, `Experience`);
+    
 });
+
+
+
+
+
+
 

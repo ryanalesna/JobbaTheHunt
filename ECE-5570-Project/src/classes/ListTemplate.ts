@@ -14,7 +14,7 @@ export class ListTemplate{
         p.innerText = item.format();
         li.append(p);
         
-        this.container.prepend(li);
+        this.container.append(li);
     }
 }
 

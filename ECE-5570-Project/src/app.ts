@@ -9,6 +9,8 @@ const jobForm = document.querySelector('.new-item-form') as HTMLFormElement;
 
 // inputs
 const name = document.querySelector("#name") as HTMLInputElement;
+const schoolname = document.querySelector("#school") as HTMLInputElement;
+
 
 const CoName = document.querySelector('#CoName') as HTMLInputElement;
 const jobTitle = document.querySelector('#title') as HTMLInputElement;
@@ -22,7 +24,8 @@ const list = new ListTemplate(ul);
 nameForm.addEventListener('submit', (e: Event) => {
   e.preventDefault();
   let applicantName = name.value;
-  console.log(applicantName);
+  let school = schoolname.value;
+  console.log(applicantName, school);
   
 });
 
